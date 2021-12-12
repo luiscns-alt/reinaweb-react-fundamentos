@@ -1,11 +1,11 @@
 import "./App.css";
-import TextCounter, { TextCounter2 } from "./components/TextCounter";
+import TextCounter from "./components/TextCounter";
 
 function App() {
   return (
     <div className="App">
-      <TextCounter />
-      <TextCounter2 />
+      <TextCounter limit={10} />
+      <TextCounter limit={4} />
     </div>
   );
 }

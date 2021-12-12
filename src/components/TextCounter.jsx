@@ -1,11 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default function TextCounter() {
-  return <div>Ola</div>;
-}
-
-export class TextCounter2 extends Component {
-  render() {
-    return <div>Component Clas</div>;
-  }
+export default function TextCounter({ limit }) {
+  return (
+    <div>
+      <input type={"text"} maxLength={limit}></input>
+    </div>
+  );
 }
