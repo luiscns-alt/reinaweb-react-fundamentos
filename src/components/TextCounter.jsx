@@ -10,8 +10,13 @@ export default function TextCounter({ limit, ...props }) {
     }
   }
 
+  function enviar(event) {
+    event.preventDefault();
+    console.log({ text });
+  }
+
   return (
-    <div>
+    <form onSubmit={enviar}>
       <input
         type={"text"}
         maxLength={limit}
@@ -19,6 +24,7 @@ export default function TextCounter({ limit, ...props }) {
         onChange={handleChange}
       ></input>
       {text.length}/{limit}
-    </div>
+      <button type={"submit"}>Enviar</button>
+    </form>
   );
 }
